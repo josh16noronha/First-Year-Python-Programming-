@@ -1,0 +1,157 @@
+ECOR 1041 Lab 3 Solution Template
+
+Author and Student Number: Joshua Noronha, 101194076
+
+This file is to be used in conjunction with the detailed lab description for Lab 3.
+Use this file to enter your answers to the series of exercises you will complete.
+
+==========
+Exercise 1  (.../25)
+
+What is the name of the frame containing variable "area_of_disk"?
+
+# The name of the frame containing the variable "area_of_disk" is global frame 
+
+What does variable "area_of_disk" refer to?
+
+# The variable of the "area_of_disk" is in reference to the calculations needed to find the disk's area 
+
+What is the name of the frame containing parameter "radius"?
+
+# The function which contains the parameter "radius" is the area_of_disk 
+
+When does the frame containing parameter radius appear in the memory diagram?
+
+# The frame containing the radius as a parameter appears right after the line where area = area_of_disk(5.0) is executed since the function is being called
+
+What is the type and value of the variable "radius"? Where did that value come from?
+
+# radius is a parameter where passes a value into the function "area_of_disk" and in this case value of the variable "radius" is 5.0 which is a float
+
+How does PyTutor depict the value the function will return?
+
+# PyTutor reads the lines of code starting from the first line which is importing the entire math library, then it reads the defined function called area_of_disk which has a parameter called radius
+# The next line PyTutor reads is the variable area which calls the function and passes 5.0 into it, so the next line PyTutor reads is the return statement math.pi * radius ** 2 and this is binded to the area variable    
+# To get a final answer of a float value of 78.5398 which is binded to the area variable
+When does the frame containing "radius" disappear?
+
+# The frame which contains the radius disappears after the frame returns a value, then the value returned is binded to the variable called "area"
+
+What is the name of the frame containing the variable "area"? 
+
+# The frame name of the area variable is global frame
+
+When does "area" appear in the frame?
+
+# After the frame returns 78.5398 then the next line to be executed is area binded to the value
+
+What is the type and value of "area"? Where did that value come from?
+
+# area is 78.5398 which is a float. This value came from the radius returned value which is calculated using the formula math.pi * radius ** 2 
+
+==========
+Exercise 2 (.../10) 
+
+What value does "area_of_disk" return each time it is called?
+
+# The first time it is called the returned value is 78.5398
+# The second time it is called the returned value is 78.5398
+# The third time it is called the returned value is 78.5398
+# The fourth time it is called the returned value is 78.5398
+
+==========
+Exercise 3 (.../25)
+
+What is the name of the frame containing parameters "inner" and "outer"?
+
+# The frame containing the "inner" and "outer" parameters is called area_of_ring
+
+When does the frame appear in the memory diagram?
+
+# The frame appears after the math library is imported 
+
+What are the types and values of the variables "inner" and "outer"? 
+
+# The float values of the "inner" and "outer" variables are 5.0 and 10.0 respectively
+
+What caused those values to be bound to "inner" and "outer"?
+
+# These values are bound to the "inner" and "outer" because these are the values passed into the "inner" and "outer" parameters
+
+What is the name of the frame containing parameter "radius"? 
+
+# The name of the frame is area_of_disk 
+
+When does that frame appear in the memory diagram? How many times does it appear?
+
+# The frame appears the first time when the function is defined, second is when the area_of_ring function is called in the area_of_disk(outer) , thirdly is when the function area_of_disk(radius) is called in the area_of_disk(inner) function   
+# It is called 2 times but appears 3 times in the memory diagram  
+
+Each time the frame containing "radius" appears, what is the type and value of
+the object bound to "radius"? 
+
+# The first time radius appears it is binded to 10.0 which is a float, then the second time it appears it is binded to 5.0 which is a float, then after the calculation of math.pi * radius ** 2 is done the float of 78.5398 is binded to radius
+
+
+What caused that object to be bound to "radius"?
+
+# The after the calculation of math.pi * radius ** 2 is done the float of 78.5398 is binded to radius
+
+When does the frame containing "radius" disappear?
+
+# The frame containing radius disappears after returning the value 78.5398
+
+When does the frame containing "inner" and "outer" disappear?
+
+# The frame containing "inner" and "outer" disappears right after the float value 235.6194 is returned by subtracting the area_of_disk(outer) which is computed as 314.1593 and area_of_disk(inner) which is computed as 78.5398  
+
+What is the name of the frame containing the variable "area"? 
+
+# The name of the frame containing the variable area is the global frame 
+
+When does "area" appear in the frame?
+
+# The area appears in the frame after the float value 235.6194 is binded to the variable called area 
+
+What is the type and value of the object bound to "area"? 
+
+# area is a float type and the object binded to it is the value 235.6194
+
+What caused that object to be bound to "area"?
+
+# Because area = the function area_of_ring(10.0, 5.0) so after all the calculations were finished the result is binded to the variable area due to the "=" operator
+
+==========
+Exercise 4 (.../20)
+
+What is the type of the object returned by the function when there is
+no return statement?
+
+# The type of object returned when there is no return statementis a NoneType
+
+
+What is the value of the object returned by the function when there is
+no return statement?
+
+# The value of the object returned when there is no return statement is None
+
+==========
+Exercise 5 (.../20)
+
+When "cube" is called, but before Python executes x = x ** 3, what value is
+bound to parameter "x"? What value is bound to variable "a"?
+
+# The value bound to parameter x is the integer 2 , and the value bound to the variable a is the integer 2 when "cube" is called but before it is executed 
+
+After Python executes x = x ** 3, but before the function returns, what value
+is bound to parameter "x"? What value is bound to variable "a"?
+
+# The value bound to parameter x is the integer 8 , and the value bound to the variable a is the integer 2
+
+In Python code, does assigning a value to a function's parameter change the 
+corresponding function argument?
+
+# No, it does not change the function's parameter. For example if there is a function called add and its perameters is (a,b) instead of a and b you could put (5,6) and this will not change the function's parameter
+
+==========
+Last edited: October 27 2020
